@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playlist Downloader</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎧 Playlist to MP3</h1>
+
+    <form method="POST" onsubmit="startLoading()">
+        <input type="text" name="url" placeholder="Paste Playlist URL..." required>
+        <button type="submit">Download</button>
+    </form>
+
+    <div id="loader" class="hidden">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <p>Processing... Please wait ⏳</p>
+    </div>
+
+    {% if songs %}
+    <h2>Downloaded Songs 🎵</h2>
+
+    <a href="/download_all" class="zip-btn">Download All (ZIP)</a>
+
+    <ul>
+        {% for song in songs %}
+        <li>
+            {{ song }}
+            <a href="/download/{{ song }}">⬇️</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+<script>
+function startLoading(){
+    document.getElementById("loader").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>

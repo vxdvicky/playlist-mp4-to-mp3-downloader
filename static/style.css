@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff4b2b;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    margin-left: 10px;
+    color: yellow;
+    text-decoration: none;
+}
+
+.zip-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background: green;
+    border-radius: 10px;
+    color: white;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: lime;
+    border-radius: 10px;
+    animation: loading 5s linear infinite;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+.hidden {
+    display: none;
+}
